@@ -1,4 +1,7 @@
 = Waxter's Index
+:title-page:
+Silas Waxter
+v0.0: First Draft
 
 To compare the processes of multiple companies, a scoring model is necessary.
 The following scoring model is based on my **highest conceivable ideal** within 
