@@ -1,0 +1,154 @@
+= Waxter's Index
+
+To compare the processes of multiple companies, a scoring model is necessary.
+The following scoring model is based on my **highest conceivable ideal** within 
+embedded systems development--specifically software. I egotistically call it the
+Waxter's Index. A score is based on the number of fulfilled checkboxes divided
+by the number of total checkboxes.
+
+See also the https://en.wikipedia.org/wiki/Capability_Maturity_Model[capability 
+maturity model].
+
+== Guiding Principles:
+* code-as-code
+* docs-as-code
+* configuration-as-code
+* reproducibility
+* do it right
+* single-source-of-truth
+* https://agilemanifesto.org/principles.html[nimble principles]
+* assume people are trustworthy and have good intentions
+* measure it
+
+=== Version Control System
+[%interactive]
+* [ ] use a version control system
+** [ ] code
+** [ ] docs
+** [ ] cad files
+* [ ] conventional commits
+* [ ] branch naming scheme
+* [ ] standard, specified workflow (eg trunk-based development)
+
+=== Build
+[%interactive]
+* [ ] Hermetic builds
+* [ ] Correct builds
+* [ ] Reproducible builds
+* [ ] Distributed caching of artifacts
+* [ ] Capability to fetch dependencies
+
+=== Quality Control
+[%interactive]
+* [ ] Issue/Bug tracking system (single-source-of-truth)
+* [ ] Style guides
+** [ ] code
+** [ ] docs
+* [ ] Strong emphasis on testing
+** [ ] Test-Driven Development (TDD)
+*** [ ] tests run-able on host
+*** [ ] tests run-able on target
+** [ ] Behavior-Driven Development (BDD)
+** [ ] Manual testing
+* [ ] Design-reviews
+** [ ] code
+** [ ] hardware
+** [ ] docs
+* [ ] Static Analysis
+* [ ] CI server considered single-source-of-truth
+* [ ] Warnings and errors should not be suppressed, but if necessary, they are 
+      suppressed at the producing location.
+
+=== Automation
+[%interactive]
+* [ ] Continuous Integration (CI)
+** [ ] build project
+*** [ ] build binary
+*** [ ] build documentation outputs
+** [ ] run unit tests
+** [ ] run high-level tests (BDD)
+** [ ] run hardware-in-the-loop tests
+*** [ ] smoke test
+*** [ ] test exercises multiple sub systems
+** [ ] generate changelog (requires conventional commits)
+** [ ] generate project metrics
+*** [ ] Uses generated metric history to depict change overtime and current
+       change
+*** [ ] warnings, errors, failed tests
+*** [ ] code-coverage of tests
+*** [ ] resource usage of built binary
+**** [ ] Flash
+**** [ ] Ram
+**** [ ] CPU utilization
+*** [ ] percentage of code ignored by static analysis
+*** [ ] readability metrics of documentation
+* [ ] Continuous Deployment (CD)
+* [ ] Commands run by more than 3 people are encapsulated in a wrapper script
+      that is used instead.
+* [ ] Developer environment setup is automated and can be deployed on a new
+      machine by running 3 commands or less.
+** [ ] Code-formatter
+*** [ ] Can ignore sections with in-line tags
+* [ ] Continuous Deployment (CD)
+** [ ] Continuous Monitoring (CM)
+
+=== Documentation
+[%interactive]
+* [ ] https://www.writethedocs.org/guide/docs-as-code/[docs-as-code]
+* [ ] design decisions are documented internally
+** [ ] code contains description of used design patterns
+
+=== Collaboration
+[%interactive]
+* [ ] Teams are formed around work rather than role
+** [ ] Teams are cross-functional
+* [ ] Scheduled, consistent role-based meetings. For example, embedded software
+engineers from multiple teams discuss ways they can improve.
+* [ ] Daily stand-ups
+** [ ] less than 15 mins
+* [ ] Sprint post-mortems
+** [ ] technical
+** [ ] collaboration
+* [ ] management understands the project management triangle: resources, scope,
+      schedule.
+** [ ] understand limitations of varying resources
+* [ ] annual benchmarking against other development teams internal and external
+to company
+
+=== Experience
+[%interactive]
+* [ ] Support **Linux**, Windows, and Mac workflows
+* [ ] editor agnostic for writing
+** [ ] code
+** [ ] docs
+* [ ] Kind coworkers
+* [ ] engineers can choose to become more senior as engineer or to move into
+      management
+* [ ] office space has artwork
+* [ ] office space produces artifacts which describe design principles, design 
+      patterns, quotes, etc. These are posted around the office and are updated
+      regularly.
+* [ ] office space is hybrid of open-office and cubicles
+* [ ] company sends personnel to continued-learning conferences
+
+=== To Consider
+* [ ] https://en.wikipedia.org/wiki/C4_model[c4 model for code]
+* [ ] https://github.com/features/copilot[github co-pilot]
+* [ ] system simulation:
+**      https://www.flux.ai/p
+
+=== Reading
+* https://www.conventionalcommits.org/en/v1.0.0/[conventional commits]
+* https://dev.to/couchcamote/git-branching-name-convention-cch[git branching
+  name convention]
+* https://gittup.org/tup/build_system_rules_and_algorithms.pdf[Build System
+  Rules and Algorithms by Mike Shal]
+* https://bazel.build/basics/build-systems[Why a build System?]
+* https://stackoverflow.com/a/29371149/11940985[Gradle vs. Bazel]
+* https://reproducible-builds.org/[Reproducible builds]
+* https://12factor.net/[12 factor app]
+* https://www.writethedocs.org/guide/docs-as-code/[docs-as-code]
+* https://asciidoc.org/[asciidoc specification]
+* https://www.docslikecode.com/book/[docs like code]
+* https://en.wikipedia.org/wiki/Design_Patterns[gang of four]
+
